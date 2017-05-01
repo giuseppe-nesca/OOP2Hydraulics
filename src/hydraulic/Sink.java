@@ -14,5 +14,8 @@ public class Sink extends Element {
 		super(name);
 		//TODO: complete
 	}
-	
+	public void connect(Element elem) throws NullPointerException{
+		System.out.println("impossibile connettere attivamente lo scarico.");
+		throw new NullPointerException();
+	}
 }

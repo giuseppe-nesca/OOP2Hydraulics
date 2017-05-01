@@ -1,5 +1,7 @@
 package hydraulic;
 
+import java.util.ArrayList;
+
 /**
  * Main class that act as a container of the elements for
  * the simulation of an hydraulics system 
@@ -7,12 +9,14 @@ package hydraulic;
  */
 public class HSystem {
 	
+	ArrayList<Element> elements = new ArrayList<>();
+	
 	/**
 	 * Adds a new element to the system
 	 * @param elem
 	 */
 	public void addElement(Element elem){
-		// TODO: to be implemented
+		elements.add(elem);		
 	}
 	
 	/**
@@ -20,8 +24,7 @@ public class HSystem {
 	 * @return an array of elements whose length is equal to the number of added elements
 	 */
 	public Element[] getElements(){
-		// TODO: to be implemented
-		return null;
+		return  (Element[]) elements.toArray();
 	}
 	
 	/**

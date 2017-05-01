@@ -7,14 +7,17 @@ package hydraulic;
  * Any element can be connect to a downstream element
  * using the method {@link #connect(Element) connect()}.
  */
-public class Element {
+public abstract class Element {
+	
+	String name;
+	Element in,out;
 	
 	/**
 	 * Constructor
 	 * @param name the name of the element
 	 */
 	public Element(String name){
-		// TODO: to be implemented
+		this.name = name;
 	}
 
 	/**
@@ -22,8 +25,7 @@ public class Element {
 	 * @return the name of the element
 	 */
 	public String getName(){
-		// TODO: to be implemented
-		return null;
+		return name;
 	}
 	
 	/**
@@ -32,7 +34,15 @@ public class Element {
 	 * @param elem the element that will be placed downstream
 	 */
 	public void connect(Element elem){
-		// TODO: to be implemented
+		
+		out=elem; elem.inConnection(this);
+		
+	}
+	/**
+	 * Set input of the connected element 
+	 **/
+	protected void inConnection(Element elem){
+		in=elem;
 	}
 	
 	/**
@@ -40,8 +50,7 @@ public class Element {
 	 * @return downstream element
 	 */
 	public Element getOutput(){
-		// TODO: to be implemented
-		return null;
+		return out;
 	}
 	
 }
