@@ -7,14 +7,14 @@ package hydraulic;
  * {@link #setFlow(double) setFlow()}.
  */
 public class Source extends Element {
-
+	
 	public Source(String name) {
 		super(name);
 		//TODO: complete
 	}
 
 	public void setFlow(double flow){
-		//TODO: complete
+		this.flow=flow;
 	}
 	
 }

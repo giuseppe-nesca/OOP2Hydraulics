@@ -9,9 +9,17 @@ package hydraulic;
  */
 public abstract class Element {
 	
-	String name;
-	Element in,out;
+	protected String name;
+	protected Element in,out;
+	protected double flow;  // in == out / out/2 for Split : the T element
 	
+	public double getFlow(){
+		return flow;
+	}
+	
+	public void setFlow(double flow){
+		this.flow=flow;
+	}
 	/**
 	 * Constructor
 	 * @param name the name of the element

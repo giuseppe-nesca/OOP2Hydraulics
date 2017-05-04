@@ -9,13 +9,18 @@ package hydraulic;
 
 public class Tap extends Element {
 
+	private boolean status;
+	
 	public Tap(String name) {
 		super(name);
 		//TODO: complete
 	}
 	
 	public void setOpen(boolean open){
-		//TODO: complete
+		status=open;
 	}
-
+	
+	public boolean getStatus(){
+		return status;
+	}
 }
